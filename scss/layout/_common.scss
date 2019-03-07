@@ -1,0 +1,269 @@
+#main {
+    padding: 15px 0 0 0;
+    border-bottom: 1px solid #f1f1f5;
+    @include media('>=desktop') {
+        padding: 55px 0 58px;
+    }
+}
+.list-of-main {
+    p {
+        font-size: 13px;
+        @include media('>=desktop') {
+            line-height: 24px;
+            font-size: $font-size-sm;
+        }
+        &:last-child {
+            margin-bottom: 20px;
+            @include media('>=desktop') {
+                margin-bottom: 40px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+.description-wrap {
+    p {
+        font-size: 13px;
+        @include media('>=desktop') {
+            line-height: 24px;
+            font-size: $font-size-sm;
+        }
+        &:last-child {
+            @include media('>=desktop') {
+                margin-bottom: 34px;
+            }
+        }
+    }
+}
+.georgaphy {
+    p {
+        font-size: 13px;
+        @include media('>=desktop') {
+            line-height: 24px;
+            font-size: $font-size-sm;
+        }
+        &:last-child {
+            @include media('>=desktop') {
+                margin-bottom: 43px;  
+            }
+        }
+    }
+}
+.description-title {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    @include media('>=desktop') {
+        font-size: $rem-base;
+        line-height: 24px;
+        margin-bottom: 29px;
+    }
+}
+.block-title {
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: #0f0f0f;
+    @include media('>=desktop') {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+}
+.quote {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    @include media('>=desktop') {
+        padding-top: 42px;
+        padding-bottom: 39px;
+        margin-bottom: 47px;
+    }
+    &:before {
+        content: '\201c';
+        position: absolute;
+        font-size: 40px;
+        line-height: 35px;
+        color: #ffe50a;
+        left: -4px;
+        top: 15px;
+        @include media('>=desktop') {
+            font-size: 80px;
+            line-height: 70px;
+            top: 40px;
+        }
+    } 
+    p {
+        margin-left: 30px;
+        font-family: $font-family-baskerville;
+        font-style: italic;
+        font-size: 13px;
+        margin-bottom: 15px;
+        @include media('>=desktop') {
+            margin-left: 70px;
+            line-height: 30px;
+            font-size:  $rem-base;
+        }
+    }
+}
+.quote-footer {
+    color: #797979;
+    text-align: right;
+    span {
+        position: relative;
+        padding-right: 2px;
+        font-size: 13px;
+        @include media('>=desktop') {
+            font-size: $font-size-sm;
+        }
+        &:before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateX(-25px);
+            background-color: #797979;
+            @include media('>=desktop') {
+                width: 40px;
+                transform: translateX(-60px);
+            }
+        }
+    }
+}
+.table-wrapp {
+    overflow-x: auto;
+}
+.table-block {
+    margin-bottom: 20px;
+    border: 1px solid #f0f0f0;
+    max-width: 630px;
+    width: 100%;
+    @include media('>=desktop') {
+        margin-bottom: 45px;
+    }
+    th {
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 12px;
+        line-height: 12px;
+        color: #797979;
+    }
+    th {
+        padding: 15px;
+        @include media('>=desktop') {
+            padding: 25px;
+        }
+    }
+    td {
+        padding: 15px;
+        line-height: 14px;
+        @include media('>=desktop') {
+            padding: 16px 15px;
+        }
+    }
+    tr {
+        &:nth-child(2n+2) {
+            background-color: #fafbfc;
+        }
+    }
+    &~ p {
+        padding-left: 25px;
+        margin-bottom: 0;
+    }
+}
+.latest-posts {
+    border-top: 1px solid #f1f1f5;
+    padding-top: 20px;
+    @include media('>=desktop') {
+        padding-top: 64px;
+    }
+}
+.posts-title {
+    text-transform: uppercase;
+    font-size: $rem-base;
+    margin-bottom: 20px;
+    text-align: center;
+    @include media('>=desktop') {
+        margin-bottom: 43px;
+        font-size: 24px;
+    }
+}
+.post-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px 2px #f4f4f5;
+    margin-bottom: 20px;
+    @include media('>=tablet') {
+        flex-direction: column;
+    }
+    @include media('>=desktop') {
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+    div {
+        flex-basis: 50%;
+        max-width: 50%;
+        width: 100%;
+        @include media('>=tablet') {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+        @include media('>=desktop') {
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+    }
+    .post-img {
+        background-position: center;
+        background-size: cover;
+        min-height: 100px;
+        @include media('>=desktop') {
+            min-height: auto; 
+        }
+    }
+}
+.post-desc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    min-height: 145px;
+    @include media('>=desktop') {
+        padding: 25px 15px 15px 20px;
+    }
+    .post-cat {
+        font-size: 12px;
+        color: #a2a2a2;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .post-title {
+        font-size: $font-size-sm;
+        margin-bottom: 15px;
+        width: 100%;
+        @include media('>=desktop') {
+            font-size: $rem-base;
+        }
+    }
+    .read-more {
+        font-size: 12px;
+        color: #0f0f0f;
+        text-transform: uppercase;
+        max-width: 80px;
+        width: 100%;
+        position: relative;
+        margin-right: 10px;
+        img {
+            width: 10px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(100% ,-50%);
+        }
+    }
+}
